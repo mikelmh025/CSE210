@@ -152,13 +152,13 @@ def Lex( exprssn, p ):
             p.o(p, c)
          else:
            if bgn is None:
-             bgn = cp
+             bgn = cp   
       else:
          print ('Invalid character in expression')
          if bgn is not None:
             p.v(p, exprssn[bgn:cp])
             bgn = None
- 
+   
    if bgn is not None:
       p.v(p, exprssn[bgn:cp+1])
       bgn = None

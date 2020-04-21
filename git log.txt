@@ -1,7 +1,17 @@
+(base) minghaoliu@Butters-Man CSE210git (master) $ git log
+commit b946c94e6142c086692007cd5de59ad2a52d7506 (HEAD -> master, origin/master)
+Author: mikelmh025 <38229852+mikelmh025@users.noreply.github.com>
+Date:   Wed Apr 8 20:58:33 2020 -0700
 
-I didn't notice we need to show our git log after finishing the assignment. So I created the git repo after finishing up the code. So there is only one commit.
+    add new test cases
 
-commit 1c5ffa2296e14a0efced1df191854f21dbf848ff (HEAD -> master, origin/master)
+commit 53f455f022584b29d42be6c1d4e51e391eb63888
+Author: mikelmh025 <38229852+mikelmh025@users.noreply.github.com>
+Date:   Wed Apr 8 20:47:00 2020 -0700
+
+    doc
+
+commit 1c5ffa2296e14a0efced1df191854f21dbf848ff
 Author: mikelmh025 <38229852+mikelmh025@users.noreply.github.com>
 Date:   Wed Apr 8 20:35:21 2020 -0700
 
