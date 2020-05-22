@@ -5,7 +5,7 @@ function flatten<T>(tree:Tree<T>):List<T>
 {
     match tree
     case Leaf => Nil
-    case Node(ta,tb,n) => append(Cons(n,flatten(ta)),flatten(tb))
+    case Node(ta,tb,n) => append(flatten(ta), Cons(n,flatten(tb)))
 
 }
 
@@ -72,7 +72,7 @@ ensures treeContains(tree, element) <==> listContains(flatten(tree), element)
                 == (element == n || listContains(flatten(ta), element) || listContains(flatten(tb), element));
             
             assert listContains(flatten(tree), element)
-                == listContains(append(Cons(n, flatten(ta)), flatten(tb)), element)
+                == listContains(append(flatten(ta), Cons(n, flatten(tb))), element)
                 == (listContains(Cons(n, flatten(ta)), element)|| listContains(flatten(tb), element))
                 == (element == n || listContains(flatten(ta), element) || listContains(flatten(tb), element));
         }
