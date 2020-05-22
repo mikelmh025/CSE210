@@ -1,0 +1,25 @@
+I used google CoLab for this assignment. It automatically have version control.
+
+commit d18ad10ed9753fbc384fb2e3e6df074e877ff0c9 (HEAD -> master, origin/master)
+Author: mikelmh025 <38229852+mikelmh025@users.noreply.github.com>
+Date:   Mon Apr 20 20:40:37 2020 -0700
+
+    hw2
+
+commit b946c94e6142c086692007cd5de59ad2a52d7506
+Author: mikelmh025 <38229852+mikelmh025@users.noreply.github.com>
+Date:   Wed Apr 8 20:58:33 2020 -0700
+
+    add new test cases
+
+commit 53f455f022584b29d42be6c1d4e51e391eb63888
+Author: mikelmh025 <38229852+mikelmh025@users.noreply.github.com>
+Date:   Wed Apr 8 20:47:00 2020 -0700
+
+    doc
+
+commit 1c5ffa2296e14a0efced1df191854f21dbf848ff
+Author: mikelmh025 <38229852+mikelmh025@users.noreply.github.com>
+Date:   Wed Apr 8 20:35:21 2020 -0700
+
+    arith

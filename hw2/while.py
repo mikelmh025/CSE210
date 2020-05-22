@@ -288,6 +288,7 @@ class Yaccer(object):
                   '*': (MultAexp, 3, 3),
                   '^': (PowAexp, 4, 4),
                   '(': (openParen, 0, 8),
+                  
                   }
       #   print("opDict[operchar][2]",opDict[[operchar]])
         operPrecidence = opDict[operchar][2]
@@ -446,7 +447,8 @@ class YaccerBool(object):
                   '∨': (OrBexp, 1, 1),
                   '¬':(NotBexp, 4, 4),
                   '(': (openParen, 0, 8 ),
-
+                  '|':(GreaterEqualBexp,2, 2),
+                  '?':(LessEqualBexp, 2, 2),
                   }
         operPrecidence = opDict[operchar][2]
         # print("opDict[operchar]",opDict[operchar])
@@ -529,7 +531,7 @@ def LexBool(exprssn, p, store):
             # char_flag = 0
             p.v(p,'1',char_flag,store)
             p.o(p, c)   
-        elif c in '<>':
+        elif c in '<>|?':
             #  print('bgn',bgn)
             if bgn is not None:
                 #print("cp, bgn", cp, bgn, exprssn[bgn:cp])
@@ -887,6 +889,8 @@ expr = input("")
 # expr = while ( ¬ ( 0 - -1 < 2 + z ) ) do skip ; while -1 * IY = 2 - L ∧ 0 + x < 2 + 2 do while ( ¬ ( z + S = z - -1 ) ) do if ( false ∨ NT + -3 = 3 ) then y := k * 0 else y := 0 - y
 # expr = "while -1 * IY = 2 - L ∧ 0 + x < 2 + 2 do while ( ¬ ( z + S = z - -1 ) ) do if ( false ∨ NT + -3 = 3 ) then y := k * 0 else y := 0 - y"
 
+# expr = "while x <= 1 do x := 3"
+
 expr = expr.replace(":=", ":")
 expr = expr.replace("if", "@")
 expr = expr.replace("then", "#")
@@ -894,6 +898,8 @@ expr = expr.replace("else", "$")
 expr = expr.replace("while", "%")
 expr = expr.replace("do", "&")
 expr = expr.replace("skip","!")
+expr = expr.replace(">=","|")
+expr = expr.replace("<=","?")
 # expr = expr.replace("{","")
 # expr = expr.replace("}","")
 
